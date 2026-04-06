@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GroupWear – Custom Bulk T-Shirt Manufacturer for Teams, Clubs & Corporates</title>
+  <meta name="description" content="Professional bulk custom t-shirt manufacturer. Ideal for sports teams, university clubs, corporate events & branded merchandise. MOQ 20pcs. Get a free quote today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1A56DB;
+      --primary-dark: #1244B3;
+      --primary-light: #3B82F6;
+      --secondary: #0F172A;
+      --accent: #F59E0B;
+      --success: #10B981;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-light: #94A3B8;
+      --bg-light: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --border: #E2E8F0;
+      --shadow-sm: 0 1px 6px rgba(0,0,0,0.07);
+      --shadow-md: 0 8px 24px rgba(0,0,0,0.11);
+      --shadow-lg: 0 20px 48px rgba(0,0,0,0.15);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-primary); background: #fff; overflow-x: hidden; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; border: none; outline: none; background: none; font-family: inherit; }
+
+    /* ===== Announcement Bar ===== */
+    .ann-bar {
+      background: var(--primary-dark);
+      color: #fff;
+      text-align: center;
+      padding: 9px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      display: flex; align-items: center; justify-content: center; gap: 20px;
+    }
+    .ann-bar span { display: flex; align-items: center; gap: 6px; }
+    .ann-bar .sep { opacity: 0.3; }
+
+    /* ===== Trust Bar ===== */
+    .trust-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+    }
+    .trust-bar .inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 12.5px; font-weight: 500; color: var(--text-secondary);
+    }
+    .trust-item svg { width: 16px; height: 16px; color: var(--primary); flex-shrink: 0; }
+    .trust-badge {
+      padding: 3px 10px; border: 1.5px solid var(--border); border-radius: 20px;
+      font-size: 11px; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.4px;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff; border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      height: 64px; display: flex; align-items: center; gap: 32px;
+    }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 1px; color: var(--primary); white-space: nowrap; }
+    .nav-logo span { color: var(--secondary); }
+    .nav-links { display: flex; gap: 6px; flex: 1; }
+    .nav-links a {
+      padding: 7px 14px; border-radius: 7px; font-size: 14px; font-weight: 500;
+      color: var(--text-secondary); transition: var(--transition); white-space: nowrap;
+    }
+    .nav-links a:hover { background: var(--bg-light); color: var(--primary); }
+    .nav-links a.active { background: #EFF6FF; color: var(--primary); }
+    .nav-actions { display: flex; gap: 10px; align-items: center; margin-left: auto; }
+    .btn-outline {
+      padding: 8px 18px; border: 1.5px solid var(--primary); border-radius: 8px;
+      color: var(--primary); font-size: 14px; font-weight: 600;
+      transition: var(--transition); white-space: nowrap;
+    }
+    .btn-outline:hover { background: var(--primary); color: #fff; }
+    .btn-primary {
+      padding: 9px 20px; background: var(--primary); color: #fff; border-radius: 8px;
+      font-size: 14px; font-weight: 600; transition: var(--transition); white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(26,86,219,0.35); }
+
+    /* ===== Hero Slider ===== */
+    .hero { position: relative; height: 580px; overflow: hidden; background: #0F172A; }
+    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease; }
+    .slide.active { opacity: 1; }
+    .slide-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center; filter: brightness(0.45);
+    }
+    .slide-content {
+      position: relative; z-index: 2; height: 100%;
+      display: flex; flex-direction: column; justify-content: center;
+      max-width: 1200px; margin: 0 auto; padding: 0 60px 90px;
+    }
+    .slide-tag {
+      display: inline-block; padding: 5px 14px; border-radius: 20px;
+      background: var(--primary); color: #fff; font-size: 12px; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 18px; width: fit-content;
+    }
+    .slide-content h1 {
+      font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6vw, 72px);
+      line-height: 1.0; color: #fff; margin-bottom: 18px; letter-spacing: 1px;
+    }
+    .slide-content p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 520px; line-height: 1.6; }
+    .slide-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .slide-btn-primary {
+      padding: 14px 32px; background: var(--primary); color: #fff; border-radius: 10px;
+      font-size: 15px; font-weight: 700; transition: var(--transition);
+    }
+    .slide-btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,86,219,0.45); }
+    .slide-btn-secondary {
+      padding: 14px 32px; border: 2px solid rgba(255,255,255,0.6); color: #fff; border-radius: 10px;
+      font-size: 15px; font-weight: 600; transition: var(--transition); backdrop-filter: blur(4px);
+    }
+    .slide-btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.12); }
+    .hero-controls { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; gap: 10px; }
+    .hero-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: var(--transition); }
+    .hero-dot.active { background: #fff; width: 24px; border-radius: 4px; }
+    .hero-arrows { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; width: 100%; padding: 0 20px; display: flex; justify-content: space-between; pointer-events: none; }
+    .hero-arrow { width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; cursor: pointer; pointer-events: all; transition: var(--transition); border: 1px solid rgba(255,255,255,0.2); }
+    .hero-arrow:hover { background: rgba(255,255,255,0.28); }
+    .hero-arrow svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2.5; }
+    /* Quick stats strip */
+    .hero-stats {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 5;
+      background: rgba(15,23,42,0.85); backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-stats .inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: repeat(4,1fr);
+    }
+    .h-stat { padding: 18px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+    .h-stat:last-child { border-right: none; }
+    .h-stat .val { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: #fff; letter-spacing: 0.5px; line-height: 1; }
+    .h-stat .val em { color: var(--accent); font-style: normal; }
+    .h-stat .lbl { font-size: 11.5px; color: rgba(255,255,255,0.55); margin-top: 4px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ===== Section commons ===== */
+    section { padding: 80px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-head { text-align: center; margin-bottom: 52px; }
+    .section-tag {
+      display: inline-block; padding: 5px 16px; background: #EFF6FF; color: var(--primary);
+      border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 14px;
+    }
+    .section-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 4vw, 46px); letter-spacing: 0.5px; margin-bottom: 12px; }
+    .section-head p { font-size: 16px; color: var(--text-secondary); max-width: 560px; margin: 0 auto; line-height: 1.65; }
+
+    /* ===== Client Segments (Who We Serve) ===== */
+    .segments { background: var(--bg-light); }
+    .seg-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .seg-card {
+      background: #fff; border-radius: var(--radius-md); padding: 32px 24px;
+      text-align: center; border: 1.5px solid var(--border); transition: var(--transition); cursor: default;
+    }
+    .seg-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .seg-icon {
+      width: 60px; height: 60px; border-radius: 16px; background: #EFF6FF;
+      margin: 0 auto 18px; display: flex; align-items: center; justify-content: center;
+    }
+    .seg-icon svg { width: 28px; height: 28px; stroke: var(--primary); fill: none; stroke-width: 1.8; }
+    .seg-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .seg-card p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; }
+    .seg-examples { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+    .seg-tag { padding: 3px 10px; background: #F1F5F9; border-radius: 20px; font-size: 11.5px; color: var(--text-secondary); font-weight: 500; }
+
+    /* ===== Tiered Pricing (formerly products) ===== */
+    .pricing { background: #fff; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .price-card {
+      border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden;
+      transition: var(--transition); position: relative;
+    }
+    .price-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .price-card.featured { border-color: var(--primary); box-shadow: 0 8px 32px rgba(26,86,219,0.15); }
+    .price-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: var(--accent); color: #fff; font-size: 11px; font-weight: 700;
+      padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .price-card-img { height: 220px; overflow: hidden; background: var(--bg-light); }
+    .price-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .price-card:hover .price-card-img img { transform: scale(1.05); }
+    .price-card-body { padding: 22px 22px 24px; }
+    .price-card-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+    .price-card-body .sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; }
+    .tier-rows { margin-bottom: 18px; }
+    .tier-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 12px; border-radius: 8px; font-size: 13.5px;
+    }
+    .tier-row:nth-child(odd) { background: var(--bg-light); }
+    .tier-row .qty { font-weight: 600; color: var(--text-secondary); }
+    .tier-row .price { font-weight: 700; color: var(--primary); font-size: 15px; }
+    .tier-row .save { font-size: 11px; color: var(--success); font-weight: 600; }
+    .price-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+    .price-chip { padding: 4px 10px; background: #F1F5F9; border-radius: 20px; font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+    .price-chip.green { background: #D1FAE5; color: #065F46; }
+    .price-cta {
+      display: block; width: 100%; padding: 12px; text-align: center;
+      background: var(--primary); color: #fff; border-radius: 8px;
+      font-size: 14px; font-weight: 700; transition: var(--transition);
+    }
+    .price-cta:hover { background: var(--primary-dark); }
+    .price-card.featured .price-cta { background: var(--primary); box-shadow: 0 4px 14px rgba(26,86,219,0.35); }
+
+    /* ===== Catalog / Product Types ===== */
+    .catalog { background: var(--bg-light); }
+    .cat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    .cat-card {
+      border-radius: var(--radius-md); overflow: hidden; background: #fff;
+      border: 1.5px solid var(--border); transition: var(--transition);
+    }
+    .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary); }
+    .cat-img { height: 180px; overflow: hidden; background: var(--bg-light); }
+    .cat-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .cat-card:hover .cat-img img { transform: scale(1.06); }
+    .cat-body { padding: 16px 18px 18px; }
+    .cat-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+    .cat-body p { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5; }
+    .cat-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      color: var(--primary); font-size: 13px; font-weight: 600; transition: var(--transition);
+    }
+    .cat-link svg { width: 14px; height: 14px; transition: transform 0.2s; }
+    .cat-card:hover .cat-link svg { transform: translateX(3px); }
+
+    /* ===== How It Works ===== */
+    .hiw { background: #fff; }
+    .hiw-steps { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; position: relative; }
+    .hiw-steps::before {
+      content: ''; position: absolute; top: 36px; left: 10%; right: 10%;
+      height: 2px; background: linear-gradient(90deg, var(--primary) 0%, #93C5FD 100%);
+      z-index: 0;
+    }
+    .hiw-step { text-align: center; padding: 0 12px; position: relative; z-index: 1; }
+    .step-num {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      font-family: 'Bebas Neue', sans-serif; font-size: 28px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px; position: relative;
+      box-shadow: 0 4px 18px rgba(26,86,219,0.3);
+    }
+    .step-num .check {
+      position: absolute; top: -4px; right: -4px; width: 20px; height: 20px;
+      background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    }
+    .step-num .check svg { width: 10px; height: 10px; stroke: #fff; stroke-width: 3; fill: none; }
+    .hiw-step h3 { font-size: 14px; font-weight: 700; margin-bottom: 7px; }
+    .hiw-step p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* ===== Why Choose Us ===== */
+    .why { background: var(--secondary); color: #fff; }
+    .why .section-head .section-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); }
+    .why .section-head h2 { color: #fff; }
+    .why .section-head p { color: rgba(255,255,255,0.65); }
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .why-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md); padding: 32px 28px; transition: var(--transition);
+    }
+    .why-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-4px); border-color: rgba(255,255,255,0.2); }
+    .why-icon {
+      width: 52px; height: 52px; border-radius: 14px; background: rgba(59,130,246,0.2);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+    }
+    .why-icon svg { width: 24px; height: 24px; stroke: #93C5FD; fill: none; stroke-width: 1.8; }
+    .why-card h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .why-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+    /* ===== Promotional / Seasonal Deal ===== */
+    .promo { background: linear-gradient(135deg, #1A56DB 0%, #1244B3 50%, #0F172A 100%); color: #fff; padding: 70px 0; }
+    .promo-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .promo-label { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .promo h2 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 1.05; margin-bottom: 16px; letter-spacing: 0.5px; }
+    .promo p { font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 28px; }
+    .promo-perks { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
+    .promo-perks li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: rgba(255,255,255,0.85); }
+    .promo-perks li::before { content: ''; width: 18px; height: 18px; border-radius: 50%; background: var(--success); flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size: 12px; background-repeat: no-repeat; background-position: center; }
+    .promo-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .promo-btn-w { padding: 13px 28px; background: #fff; color: var(--primary); border-radius: 9px; font-size: 15px; font-weight: 700; transition: var(--transition); }
+    .promo-btn-w:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,255,255,0.25); }
+    .promo-btn-o { padding: 13px 28px; border: 2px solid rgba(255,255,255,0.5); color: #fff; border-radius: 9px; font-size: 15px; font-weight: 600; transition: var(--transition); }
+    .promo-btn-o:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+    /* Right: deal cards */
+    .promo-deals { display: flex; flex-direction: column; gap: 14px; }
+    .deal-card {
+      background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md); padding: 20px 22px;
+      display: flex; justify-content: space-between; align-items: center;
+      transition: var(--transition);
+    }
+    .deal-card:hover { background: rgba(255,255,255,0.14); }
+    .deal-card .d-title { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+    .deal-card .d-desc { font-size: 13px; color: rgba(255,255,255,0.65); }
+    .deal-pill { background: var(--accent); color: #fff; font-size: 13px; font-weight: 800; padding: 8px 18px; border-radius: 30px; white-space: nowrap; flex-shrink: 0; }
+    /* Countdown timer */
+    .countdown-wrap { display: flex; align-items: center; gap: 8px; margin: 20px 0 8px; }
+    .countdown-wrap .c-label { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .countdown { display: flex; gap: 8px; }
+    .c-unit { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 8px 12px; text-align: center; min-width: 52px; }
+    .c-unit .c-num { font-family: 'Bebas Neue', sans-serif; font-size: 26px; line-height: 1; color: #fff; }
+    .c-unit .c-lbl { font-size: 10px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.5px; }
+    .c-sep { font-size: 22px; color: rgba(255,255,255,0.4); font-weight: 700; align-self: center; }
+
+    /* ===== Clients / Case Studies ===== */
+    .cases { background: #fff; }
+    .cases-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .case-card {
+      border-radius: var(--radius-md); overflow: hidden; background: #fff;
+      border: 1.5px solid var(--border); transition: var(--transition);
+    }
+    .case-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .case-img { height: 200px; overflow: hidden; position: relative; }
+    .case-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .case-card:hover .case-img img { transform: scale(1.05); }
+    .case-type {
+      position: absolute; top: 14px; left: 14px;
+      background: var(--primary); color: #fff; font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase;
+    }
+    .case-body { padding: 20px 22px; }
+    .case-body h3 { font-size: 15.5px; font-weight: 700; margin-bottom: 8px; }
+    .case-body p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; }
+    .case-meta { display: flex; gap: 14px; flex-wrap: wrap; }
+    .case-stat { display: flex; flex-direction: column; }
+    .case-stat .s-val { font-size: 16px; font-weight: 800; color: var(--primary); }
+    .case-stat .s-key { font-size: 11px; color: var(--text-light); font-weight: 500; }
+    .case-quote { margin-top: 14px; padding: 12px 14px; background: var(--bg-light); border-left: 3px solid var(--primary); border-radius: 0 8px 8px 0; font-size: 13px; color: var(--text-secondary); line-height: 1.6; font-style: italic; }
+    .case-author { margin-top: 8px; display: flex; align-items: center; gap: 8px; }
+    .case-author img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+    .case-author .a-name { font-size: 12.5px; font-weight: 600; }
+    .case-author .a-role { font-size: 11.5px; color: var(--text-light); }
+
+    /* ===== Shipping & Payment ===== */
+    .logistics { background: var(--bg-light); }
+    .log-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .log-block { background: #fff; border-radius: var(--radius-md); padding: 32px 28px; border: 1.5px solid var(--border); }
+    .log-block h3 { font-size: 17px; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .log-block h3 svg { width: 20px; height: 20px; stroke: var(--primary); fill: none; stroke-width: 2; }
+    .log-items { display: flex; flex-direction: column; gap: 12px; }
+    .log-item { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; transition: var(--transition); }
+    .log-item:hover { border-color: var(--primary); background: #F8FBFF; }
+    .log-item-icon { width: 42px; height: 42px; border-radius: 10px; background: #EFF6FF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .log-item-icon svg { width: 20px; height: 20px; stroke: var(--primary); fill: none; stroke-width: 1.8; }
+    .log-item-body .li-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .log-item-body .li-desc { font-size: 12.5px; color: var(--text-secondary); }
+    .pay-logos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+    .pay-logo { height: 34px; padding: 6px 14px; background: var(--bg-light); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; font-size: 13px; font-weight: 700; color: var(--text-secondary); gap: 6px; }
+    .pay-logo svg { width: 18px; height: 18px; }
+
+    /* ===== Certifications / Trust Signals ===== */
+    .certs { background: #fff; padding: 50px 0; }
+    .certs-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .certs h3 { text-align: center; font-size: 14px; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 28px; }
+    .cert-logos { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .cert-logo { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .cert-logo .cert-badge { width: 64px; height: 64px; border-radius: 16px; background: var(--bg-light); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 11px; color: var(--text-secondary); letter-spacing: 0.5px; text-align: center; line-height: 1.2; padding: 6px; }
+    .cert-logo .cert-name { font-size: 11px; color: var(--text-light); font-weight: 500; }
+
+    /* ===== CTA Strip ===== */
+    .cta-strip {
+      background: linear-gradient(135deg, #1A56DB 0%, #1244B3 100%);
+      padding: 70px 0;
+    }
+    .cta-content { text-align: center; }
+    .cta-content h2 { font-family: 'Bebas Neue', sans-serif; font-size: 50px; color: #fff; letter-spacing: 1px; margin-bottom: 14px; }
+    .cta-content p { font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: 34px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn-w { padding: 15px 36px; background: #fff; color: var(--primary); border-radius: 10px; font-size: 16px; font-weight: 700; transition: var(--transition); }
+    .cta-btn-w:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,255,255,0.3); }
+    .cta-btn-t { padding: 15px 36px; border: 2px solid rgba(255,255,255,0.55); color: #fff; border-radius: 10px; font-size: 16px; font-weight: 600; transition: var(--transition); }
+    .cta-btn-t:hover { border-color: #fff; background: rgba(255,255,255,0.12); }
+
+    /* ===== Footer ===== */
+    footer { background: var(--secondary); color: rgba(255,255,255,0.75); padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+    .f-brand .logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #fff; letter-spacing: 1px; margin-bottom: 14px; }
+    .f-brand p { font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+    .f-contact { display: flex; flex-direction: column; gap: 10px; }
+    .f-contact a { font-size: 13.5px; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 8px; transition: var(--transition); }
+    .f-contact a:hover { color: #fff; }
+    .f-contact a svg { width: 15px; height: 15px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 18px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13.5px; color: rgba(255,255,255,0.55); transition: var(--transition); }
+    .footer-col ul li a:hover { color: #fff; padding-left: 4px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: 12.5px; color: rgba(255,255,255,0.35); }
+    .footer-badges { display: flex; gap: 8px; }
+    .f-badge { padding: 3px 10px; border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; font-size: 11px; color: rgba(255,255,255,0.4); }
+    .social-links { display: flex; gap: 10px; margin-top: 16px; }
+    .soc-btn { width: 36px; height: 36px; border-radius: 9px; background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; transition: var(--transition); border: 1px solid rgba(255,255,255,0.1); }
+    .soc-btn:hover { background: var(--primary); border-color: var(--primary); }
+    .soc-btn svg { width: 16px; height: 16px; stroke: rgba(255,255,255,0.75); fill: none; stroke-width: 2; }
+
+    /* ===== WhatsApp Float ===== */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
+    .wa-btn {
+      width: 56px; height: 56px; border-radius: 50%; background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.45); transition: var(--transition);
+      cursor: pointer;
+    }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 10px 28px rgba(37,211,102,0.55); }
+    .wa-btn svg { width: 28px; height: 28px; fill: #fff; }
+    .wa-tip {
+      position: absolute; bottom: 68px; right: 0; white-space: nowrap;
+      background: #fff; border-radius: 10px; padding: 10px 16px;
+      font-size: 13px; font-weight: 600; color: var(--text-primary);
+      box-shadow: var(--shadow-md); opacity: 0; transform: translateY(6px);
+      transition: var(--transition); pointer-events: none;
+    }
+    .wa-float:hover .wa-tip { opacity: 1; transform: translateY(0); }
+    .wa-tip::after { content: ''; position: absolute; bottom: -6px; right: 20px; width: 12px; height: 6px; background: #fff; clip-path: polygon(0 0, 100% 0, 50% 100%); }
+
+    /* ===== Scroll Top ===== */
+    .scroll-top {
+      position: fixed; bottom: 96px; right: 28px; z-index: 998;
+      width: 44px; height: 44px; border-radius: 50%; background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(26,86,219,0.4); transition: var(--transition);
+      opacity: 0; pointer-events: none; cursor: pointer;
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: all; }
+    .scroll-top:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .scroll-top svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2.5; }
+
+    /* ===== Animations ===== */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .seg-grid, .pricing-grid, .cases-grid { grid-template-columns: repeat(2,1fr); }
+      .cat-grid { grid-template-columns: repeat(2,1fr); }
+      .hiw-steps { grid-template-columns: repeat(3,1fr); gap: 30px; }
+      .hiw-steps::before { display: none; }
+      .why-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero { height: 500px; }
+      .slide-content { padding: 0 30px 90px; }
+      .hero-stats .inner { grid-template-columns: repeat(2,1fr); }
+      .seg-grid, .pricing-grid, .cases-grid, .cat-grid { grid-template-columns: 1fr; }
+      .log-grid { grid-template-columns: 1fr; }
+      .promo-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hiw-steps { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      section { padding: 56px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="ann-bar">
+  <span>🎉 Summer 2026 Bulk Order Promotion — Up to <strong>40% OFF</strong> for orders 200pcs+</span>
+  <span class="sep">|</span>
+  <span>📦 Free samples available for qualified buyers</span>
+  <span class="sep">|</span>
+  <span>⚡ 7-day rush production</span>
+</div>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <div class="inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      ISO 9001 Certified
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      7-Day Rush Available
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      Free Digital Mock-up
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      MOQ from 20 pcs
+    </div>
+    <span class="trust-badge">OEKO-TEX®</span>
+    <span class="trust-badge">BSCI</span>
+    <span class="trust-badge">Alibaba Gold</span>
+    <span class="trust-badge">Trade Assurance</span>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="D:/下载/tropiknit/logo.png" alt="Logo" style="height:44px;width:auto;display:block;object-fit:contain;" /></div>
+    <div class="nav-links">
+      <a href="#segments" class="active">Who We Serve</a>
+      <a href="#pricing">Bulk Pricing</a>
+      <a href="#catalog">Products</a>
+      <a href="#hiw">How It Works</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#logistics">Shipping</a>
+    </div>
+    <div class="nav-actions">
+      <a href="mailto:tropiknit@outlook.com" class="btn-outline">Contact Sales</a>
+      <a href="mailto:tropiknit@outlook.com?subject=Bulk%20Order%20Quote" class="btn-primary">Get Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Slider -->
+<section class="hero" id="home">
+  <div class="hero-arrows">
+    <button class="hero-arrow" id="prevBtn" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="hero-arrow" id="nextBtn" aria-label="Next">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- Slide 1: Sports Teams -->
+  <div class="slide active">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=80')"></div>
+    <div class="slide-content">
+      <div class="slide-tag">Sports Teams &amp; Clubs</div>
+      <h1>GEAR YOUR TEAM<br>LOOK UNITED,<br>WIN TOGETHER</h1>
+      <p>Fully customized jerseys, warm-ups, and training tees for college sports teams, amateur leagues, and professional clubs. Every player, one identity.</p>
+      <div class="slide-btns">
+        <a href="mailto:tropiknit@outlook.com?subject=Sports+Team+Quote" class="slide-btn-primary">Request Team Quote</a>
+        <a href="#catalog" class="slide-btn-secondary">View Sports Catalog</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2: Corporate -->
+  <div class="slide">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=80')"></div>
+    <div class="slide-content">
+      <div class="slide-tag">Corporate &amp; Events</div>
+      <h1>BRANDED APPAREL<br>FOR YOUR COMPANY<br>CULTURE</h1>
+      <p>Uniform t-shirts, staff polos, and event merchandise for conferences, trade shows, onboarding kits, and company retreats. Reinforce your brand at scale.</p>
+      <div class="slide-btns">
+        <a href="mailto:tropiknit@outlook.com?subject=Corporate+Apparel+Quote" class="slide-btn-primary">Corporate Pricing</a>
+        <a href="#cases" class="slide-btn-secondary">See Client Stories</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: University Clubs -->
+  <div class="slide">
+    <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1400&q=80')"></div>
+    <div class="slide-content">
+      <div class="slide-tag">Universities &amp; Student Orgs</div>
+      <h1>MAKE YOUR CLUB<br>UNFORGETTABLE<br>THIS SEMESTER</h1>
+      <p>From Greek life to sororities, debate teams to hackathon crews — custom tees that build community and identity. Low MOQ, student-friendly pricing.</p>
+      <div class="slide-btns">
+        <a href="mailto:tropiknit@outlook.com?subject=University+Club+Quote" class="slide-btn-primary">Student Org Quote</a>
+        <a href="#pricing" class="slide-btn-secondary">See Bulk Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-controls">
+    <div class="hero-dot active" data-index="0"></div>
+    <div class="hero-dot" data-index="1"></div>
+    <div class="hero-dot" data-index="2"></div>
+  </div>
+
+  <!-- Stats strip pinned above footer of hero -->
+  <div class="hero-stats">
+    <div class="inner">
+      <div class="h-stat">
+        <div class="val"><em>8,000+</em></div>
+        <div class="lbl">Groups Served Worldwide</div>
+      </div>
+      <div class="h-stat">
+        <div class="val"><em>20</em> pcs</div>
+        <div class="lbl">Minimum Order Quantity</div>
+      </div>
+      <div class="h-stat">
+        <div class="val"><em>7</em> Days</div>
+        <div class="lbl">Rush Production Turnaround</div>
+      </div>
+      <div class="h-stat">
+        <div class="val"><em>99%</em></div>
+        <div class="lbl">On-Time Delivery Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who We Serve -->
+<section class="segments" id="segments">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-tag">Who We Serve</div>
+      <h2>Built for Groups, Teams &amp; Organizations</h2>
+      <p>We specialize exclusively in bulk custom apparel — no single-piece orders. Every solution is tailored to your group's identity and scale.</p>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-card fade-up">
+        <div class="seg-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/><path d="M16 11l2 2 4-4"/></svg>
+        </div>
+        <h3>Sports Teams &amp; Leagues</h3>
+        <p>Custom jerseys, training shirts, and warm-up gear for competitive teams and amateur clubs across all sports.</p>
+        <div class="seg-examples">
+          <span class="seg-tag">Soccer</span><span class="seg-tag">Basketball</span><span class="seg-tag">Running</span><span class="seg-tag">Esports</span>
+        </div>
+      </div>
+      <div class="seg-card fade-up">
+        <div class="seg-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h3>Corporate &amp; Enterprise</h3>
+        <p>Staff uniforms, company-branded polos, event swag, and onboarding gift packages with your logo and colors.</p>
+        <div class="seg-examples">
+          <span class="seg-tag">Staff Uniform</span><span class="seg-tag">Trade Show</span><span class="seg-tag">Team Building</span>
+        </div>
+      </div>
+      <div class="seg-card fade-up">
+        <div class="seg-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h3>Universities &amp; Clubs</h3>
+        <p>Greek life, student associations, fraternities, sororities, hackathon teams — wear your identity with pride.</p>
+        <div class="seg-examples">
+          <span class="seg-tag">Greek Life</span><span class="seg-tag">Clubs</span><span class="seg-tag">Hackathons</span><span class="seg-tag">Graduation</span>
+        </div>
+      </div>
+      <div class="seg-card fade-up">
+        <div class="seg-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Events &amp; Nonprofits</h3>
+        <p>Charity runs, music festivals, awareness campaigns — create lasting memories with custom event apparel.</p>
+        <div class="seg-examples">
+          <span class="seg-tag">5K Runs</span><span class="seg-tag">Festivals</span><span class="seg-tag">NGO</span><span class="seg-tag">Fundraisers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bulk Pricing Tiers -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-tag">Bulk Pricing</div>
+      <h2>Transparent Volume Pricing</h2>
+      <p>The more you order, the more you save. All prices include custom printing, garment, and standard QC. No hidden fees.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Starter: Basic Cotton Tee -->
+      <div class="price-card fade-up">
+        <div class="price-card-img">
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80" alt="Basic Cotton Tee" loading="lazy" />
+        </div>
+        <div class="price-card-body">
+          <h3>Basic Cotton Tee</h3>
+          <div class="sub">180 gsm · 100% combed cotton · 6 colors</div>
+          <div class="tier-rows">
+            <div class="tier-row"><span class="qty">20–49 pcs</span><span class="price">$5.90/pc</span></div>
+            <div class="tier-row"><span class="qty">50–99 pcs</span><span class="price">$4.80/pc</span><span class="save">Save 19%</span></div>
+            <div class="tier-row"><span class="qty">100–299 pcs</span><span class="price">$3.90/pc</span><span class="save">Save 34%</span></div>
+            <div class="tier-row"><span class="qty">300+ pcs</span><span class="price">$3.20/pc</span><span class="save">Save 46%</span></div>
+          </div>
+          <div class="price-meta">
+            <span class="price-chip">Screen Print</span>
+            <span class="price-chip">DTG</span>
+            <span class="price-chip green">Free Mock-up</span>
+          </div>
+          <a href="mailto:tropiknit@outlook.com?subject=Basic+Tee+Quote" class="price-cta">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Premium: Performance Polo (Featured) -->
+      <div class="price-card featured fade-up">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-card-img">
+          <img src="https://images.unsplash.com/photo-1562572159-4efc207f5aff?w=600&q=80" alt="Performance Polo" loading="lazy" />
+        </div>
+        <div class="price-card-body">
+          <h3>Performance Sport Tee</h3>
+          <div class="sub">200 gsm · moisture-wicking polyester · sublimation ready</div>
+          <div class="tier-rows">
+            <div class="tier-row"><span class="qty">20–49 pcs</span><span class="price">$8.50/pc</span></div>
+            <div class="tier-row"><span class="qty">50–99 pcs</span><span class="price">$6.90/pc</span><span class="save">Save 19%</span></div>
+            <div class="tier-row"><span class="qty">100–299 pcs</span><span class="price">$5.60/pc</span><span class="save">Save 34%</span></div>
+            <div class="tier-row"><span class="qty">300+ pcs</span><span class="price">$4.50/pc</span><span class="save">Save 47%</span></div>
+          </div>
+          <div class="price-meta">
+            <span class="price-chip">Full Sublimation</span>
+            <span class="price-chip">Embroidery</span>
+            <span class="price-chip green">Free Sample</span>
+          </div>
+          <a href="mailto:tropiknit@outlook.com?subject=Performance+Tee+Quote" class="price-cta">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Premium: Heavyweight Hoodie -->
+      <div class="price-card fade-up">
+        <div class="price-card-img">
+          <img src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?w=600&q=80" alt="Custom Hoodie" loading="lazy" />
+        </div>
+        <div class="price-card-body">
+          <h3>Custom Hoodie / Sweatshirt</h3>
+          <div class="sub">340 gsm · 80/20 cotton-poly · brushed fleece lining</div>
+          <div class="tier-rows">
+            <div class="tier-row"><span class="qty">20–49 pcs</span><span class="price">$16.80/pc</span></div>
+            <div class="tier-row"><span class="qty">50–99 pcs</span><span class="price">$13.50/pc</span><span class="save">Save 20%</span></div>
+            <div class="tier-row"><span class="qty">100–299 pcs</span><span class="price">$10.90/pc</span><span class="save">Save 35%</span></div>
+            <div class="tier-row"><span class="qty">300+ pcs</span><span class="price">$8.80/pc</span><span class="save">Save 48%</span></div>
+          </div>
+          <div class="price-meta">
+            <span class="price-chip">Embroidery</span>
+            <span class="price-chip">Screen Print</span>
+            <span class="price-chip green">Private Label</span>
+          </div>
+          <a href="mailto:tropiknit@outlook.com?subject=Hoodie+Quote" class="price-cta">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Catalog -->
+<section class="catalog" id="catalog">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-tag">Product Catalog</div>
+      <h2>Complete Apparel Range</h2>
+      <p>From lightweight summer tees to heavy fleece hoodies — we offer the full range for any group, climate, or occasion.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card fade-up">
+        <div class="cat-img">
+          <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80" alt="Unisex Cotton Tees" loading="lazy" />
+        </div>
+        <div class="cat-body">
+          <h3>Unisex Cotton Tees</h3>
+          <p>Classic fit, 180–220 gsm, screen print & DTG printing. Perfect for events and casual teams.</p>
+          <a href="mailto:tropiknit@outlook.com?subject=Cotton+Tee+Inquiry" class="cat-link">
+            View Options
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="cat-card fade-up">
+        <div class="cat-img">
+          <img src="https://images.unsplash.com/photo-1550259979-ed79b48d2a30?w=600&q=80" alt="Sport Performance" loading="lazy" />
+        </div>
+        <div class="cat-body">
+          <h3>Sport Performance Wear</h3>
+          <p>Moisture-wicking, breathable polyester jerseys. Full sublimation with team numbers &amp; logos.</p>
+          <a href="mailto:tropiknit@outlook.com?subject=Sport+Wear+Inquiry" class="cat-link">
+            View Options
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="cat-card fade-up">
+        <div class="cat-img">
+          <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80" alt="Polo Shirts" loading="lazy" />
+        </div>
+        <div class="cat-body">
+          <h3>Polo &amp; Corporate Shirts</h3>
+          <p>Piqué cotton or performance polo shirts with embroidered logos. Professional staff uniforms.</p>
+          <a href="mailto:tropiknit@outlook.com?subject=Polo+Shirt+Inquiry" class="cat-link">
+            View Options
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="cat-card fade-up">
+        <div class="cat-img">
+          <img src="https://images.unsplash.com/photo-1609873814058-a8928924184a?w=600&q=80" alt="Hoodies Sweatshirts" loading="lazy" />
+        </div>
+        <div class="cat-body">
+          <h3>Hoodies &amp; Sweatshirts</h3>
+          <p>Heavyweight fleece with pullover or zip-up options. Ideal for fall/winter group wear and club merch.</p>
+          <a href="mailto:tropiknit@outlook.com?subject=Hoodie+Inquiry" class="cat-link">
+            View Options
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="hiw" id="hiw">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-tag">Process</div>
+      <h2>From Idea to Delivered in 5 Steps</h2>
+      <p>Our streamlined B2B workflow ensures fast approvals, zero surprises, and on-time delivery for your team.</p>
+    </div>
+    <div class="hiw-steps">
+      <div class="hiw-step fade-up">
+        <div class="step-num">01</div>
+        <h3>Submit RFQ</h3>
+        <p>Tell us your quantity, style, print method, and timeline. We reply with a quote within 12 hours.</p>
+      </div>
+      <div class="hiw-step fade-up">
+        <div class="step-num">02</div>
+        <h3>Free Mock-up</h3>
+        <p>Our design team creates a digital mock-up with your artwork, colors, and logo placement — at no cost.</p>
+      </div>
+      <div class="hiw-step fade-up">
+        <div class="step-num">03</div>
+        <h3>Sample Approval</h3>
+        <p>For orders 100pcs+, we ship a physical sample for your approval before mass production starts.</p>
+      </div>
+      <div class="hiw-step fade-up">
+        <div class="step-num">04</div>
+        <h3>Production &amp; QC</h3>
+        <p>Strict in-line and final quality control. We share production photos before shipment.</p>
+      </div>
+      <div class="hiw-step fade-up">
+        <div class="step-num">05<div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+        <h3>Ship &amp; Track</h3>
+        <p>Door-to-door delivery via DHL, FedEx, or sea freight. Full tracking provided, customs cleared.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-tag">Why GroupWear</div>
+      <h2>The B2B Advantage</h2>
+      <p>We don't sell to individuals. Our entire operation is optimized for groups — faster, cheaper, and more reliable at scale.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Factory Direct Pricing</h3>
+        <p>No middlemen. We own our 50,000 sqft factory with 300+ workers. You pay factory prices, not retail margins.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Fast Turnaround</h3>
+        <p>Standard production: 12–15 days. Rush service: 7 days. Air freight available for tight deadlines.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Dedicated Account Manager</h3>
+        <p>Every client gets a named account manager available via email, WhatsApp, and video call — from RFQ to delivery.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Zero Defect Guarantee</h3>
+        <p>Full replacement or refund for any defective unit — no questions asked. Quality is our only metric.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Global Delivery Network</h3>
+        <p>Shipped to 80+ countries. All major ports. FOB, CIF, DDP Incoterms available. We handle customs paperwork.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Full Customization</h3>
+        <p>Screen printing, DTG, embroidery, full sublimation, heat transfer, woven labels, hang tags — any decoration method.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Promotional Deals -->
+<section class="promo" id="promo">
+  <div class="promo-inner">
+    <div>
+      <div class="promo-label">🔥 Limited Time Offer — Ends Soon</div>
+      <h2>ORDER NOW,<br>SAVE BIG<br>THIS SEASON</h2>
+      <div class="countdown-wrap">
+        <span class="c-label">Offer expires in:</span>
+        <div class="countdown">
+          <div class="c-unit"><div class="c-num" id="c-days">07</div><div class="c-lbl">Days</div></div>
+          <span class="c-sep">:</span>
+          <div class="c-unit"><div class="c-num" id="c-hrs">23</div><div class="c-lbl">Hrs</div></div>
+          <span class="c-sep">:</span>
+          <div class="c-unit"><div class="c-num" id="c-min">59</div><div class="c-lbl">Min</div></div>
+          <span class="c-sep">:</span>
+          <div class="c-unit"><div class="c-num" id="c-sec">59</div><div class="c-lbl">Sec</div></div>
+        </div>
+      </div>
+      <ul class="promo-perks">
+        <li>Orders 200pcs+ get <strong>40% OFF</strong> unit price</li>
+        <li>Free air freight for orders over $3,000</li>
+        <li>1 free physical sample (no deposit required)</li>
+        <li>Priority production slot — ships in 7 days</li>
+      </ul>
+      <div class="promo-btns">
+        <a href="mailto:tropiknit@outlook.com?subject=Promo+Order+Quote" class="promo-btn-w">Claim This Deal</a>
+        <a href="mailto:tropiknit@outlook.com" class="promo-btn-o">Talk to Sales</a>
+      </div>
+    </div>
+    <div>
+      <div class="promo-deals">
+        <div class="deal-card">
+          <div>
+            <div class="d-title">Sports Team Bundle</div>
+            <div class="d-desc">100pcs performance tees + numbers + 2 print locations</div>
+          </div>
+          <div class="deal-pill">From $6.20/pc</div>
+        </div>
+        <div class="deal-card">
+          <div>
+            <div class="d-title">Corporate Starter Pack</div>
+            <div class="d-desc">50pcs polo shirts with embroidered logo + custom labels</div>
+          </div>
+          <div class="deal-pill">From $9.80/pc</div>
+        </div>
+        <div class="deal-card">
+          <div>
+            <div class="d-title">Club Hoodie Deal</div>
+            <div class="d-desc">50pcs heavyweight hoodies, 1 color print, custom woven label</div>
+          </div>
+          <div class="deal-pill">From $11.50/pc</div>
+        </div>
+        <div class="deal-card">
+          <div>
+            <div class="d-title">Event Tee Rush Pack</div>
+            <div class="d-desc">200pcs basic tees, 1 color screen print, 7-day delivery</div>
+          </div>
+          <div class="deal-pill">From $3.80/pc</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case Studies -->
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-tag">Client Stories</div>
+      <h2>Real Orders, Real Results</h2>
+      <p>Here's how teams and organizations around the world used GroupWear to outfit their people and build their identity.</p>
+    </div>
+    <div class="cases-grid">
+      <!-- Case 1 -->
+      <div class="case-card fade-up">
+        <div class="case-img">
+          <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&q=80" alt="Soccer Club Case Study" loading="lazy" />
+          <span class="case-type">Sports Club</span>
+        </div>
+        <div class="case-body">
+          <h3>Pacific FC — 500pcs Sublimated Jerseys</h3>
+          <p>A semi-professional soccer club in Australia needed fully sublimated kits with player names and numbers for their entire roster across 4 age divisions.</p>
+          <div class="case-meta">
+            <div class="case-stat"><span class="s-val">500</span><span class="s-key">Jerseys Delivered</span></div>
+            <div class="case-stat"><span class="s-val">12 Days</span><span class="s-key">Turnaround</span></div>
+            <div class="case-stat"><span class="s-val">$7.40</span><span class="s-key">Per Jersey</span></div>
+          </div>
+          <div class="case-quote">"The quality was better than our previous supplier at half the price. The sublimation colors are still vivid after a full season."</div>
+          <div class="case-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Coach Mark" loading="lazy" />
+            <div>
+              <div class="a-name">Mark T. 🇦🇺</div>
+              <div class="a-role">Club Manager, Pacific FC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-card fade-up">
+        <div class="case-img">
+          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80" alt="Tech Conference Case" loading="lazy" />
+          <span class="case-type">Corporate</span>
+        </div>
+        <div class="case-body">
+          <h3>TechConf EU — 1,200pcs Staff Shirts</h3>
+          <p>A European tech conference needed branded staff t-shirts and volunteer vests across 4 shirt styles for their annual 3-day event in Berlin.</p>
+          <div class="case-meta">
+            <div class="case-stat"><span class="s-val">1,200</span><span class="s-key">Pieces Total</span></div>
+            <div class="case-stat"><span class="s-val">4 Styles</span><span class="s-key">Custom Designs</span></div>
+            <div class="case-stat"><span class="s-val">$4.20</span><span class="s-key">Per Piece</span></div>
+          </div>
+          <div class="case-quote">"Delivered 2 days early. Communication was excellent — we received daily production photos via WhatsApp. 10/10 would order again."</div>
+          <div class="case-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Sarah M" loading="lazy" />
+            <div>
+              <div class="a-name">Sarah M. 🇩🇪</div>
+              <div class="a-role">Operations Lead, TechConf EU</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="case-card fade-up">
+        <div class="case-img">
+          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&q=80" alt="University Greek Life" loading="lazy" />
+          <span class="case-type">University Club</span>
+        </div>
+        <div class="case-body">
+          <h3>Delta Sigma — 120pcs Chapter Hoodies</h3>
+          <p>A US university fraternity needed premium heavyweight hoodies with embroidered Greek letters and custom woven labels for their annual pledge class.</p>
+          <div class="case-meta">
+            <div class="case-stat"><span class="s-val">120</span><span class="s-key">Hoodies</span></div>
+            <div class="case-stat"><span class="s-val">Embroidery</span><span class="s-key">Decoration</span></div>
+            <div class="case-stat"><span class="s-val">$13.20</span><span class="s-key">Per Hoodie</span></div>
+          </div>
+          <div class="case-quote">"The Greek letters embroidery is crisp and clean. Perfect weight, washed perfectly after week one. Our whole chapter is ordering again."</div>
+          <div class="case-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="Jordan K" loading="lazy" />
+            <div>
+              <div class="a-name">Jordan K. 🇺🇸</div>
+              <div class="a-role">Chapter President, Delta Sigma</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Shipping & Payment -->
+<section class="logistics" id="logistics">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-tag">Logistics &amp; Payment</div>
+      <h2>Global Shipping &amp; Flexible Payment</h2>
+      <p>We handle the entire export process — customs documentation, packing lists, and door-to-door tracking included.</p>
+    </div>
+    <div class="log-grid fade-up">
+      <div class="log-block">
+        <h3>
+          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          Shipping Options
+        </h3>
+        <div class="log-items">
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <div class="log-item-body"><div class="li-title">DHL / FedEx Express</div><div class="li-desc">3–7 business days · door-to-door · tracking included</div></div>
+          </div>
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><path d="M3 17l2-2h14l2 2v2H3v-2z"/><path d="M3 9l9-6 9 6v8H3V9z"/></svg></div>
+            <div class="log-item-body"><div class="li-title">Air Cargo</div><div class="li-desc">5–10 business days · best for mid-volume orders</div></div>
+          </div>
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><path d="M2 20 L22 20 M4 20 L4 12 M20 20 L20 12 M2 12 L22 12 M7 12 L7 6 M17 12 L17 6 M7 6 L17 6"/></svg></div>
+            <div class="log-item-body"><div class="li-title">Sea Freight (FCL/LCL)</div><div class="li-desc">18–35 days · most economical for large orders</div></div>
+          </div>
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></div>
+            <div class="log-item-body"><div class="li-title">Rail Freight (Europe)</div><div class="li-desc">14–20 days to Europe · China–Europe rail belt</div></div>
+          </div>
+        </div>
+        <p style="margin-top:16px;font-size:12.5px;color:var(--text-light);">Incoterms: FOB · CIF · DDP · EXW available</p>
+      </div>
+      <div class="log-block">
+        <h3>
+          <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Payment Methods
+        </h3>
+        <div class="log-items">
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><path d="M17.5 7H6.5C5.12 7 4 8.12 4 9.5v5C4 15.88 5.12 17 6.5 17h11c1.38 0 2.5-1.12 2.5-2.5v-5C19 8.12 17.88 7 17.5 7z"/></svg></div>
+            <div class="log-item-body"><div class="li-title">T/T Wire Transfer</div><div class="li-desc">30% deposit · 70% before shipment</div></div>
+          </div>
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+            <div class="log-item-body"><div class="li-title">PayPal / Payoneer</div><div class="li-desc">Buyer protection · ideal for first orders under $2,000</div></div>
+          </div>
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+            <div class="log-item-body"><div class="li-title">L/C (Letter of Credit)</div><div class="li-desc">Available for orders over $10,000</div></div>
+          </div>
+          <div class="log-item">
+            <div class="log-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div class="log-item-body"><div class="li-title">Alibaba Trade Assurance</div><div class="li-desc">Full buyer protection via Alibaba escrow</div></div>
+          </div>
+        </div>
+        <div class="pay-logos" style="margin-top:16px;">
+          <div class="pay-logo">PayPal</div>
+          <div class="pay-logo">T/T</div>
+          <div class="pay-logo">L/C</div>
+          <div class="pay-logo">Payoneer</div>
+          <div class="pay-logo">USDT</div>
+          <div class="pay-logo">Escrow</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section class="certs">
+  <div class="certs-inner">
+    <h3>Trusted by 8,000+ Organizations — Verified by Global Standards</h3>
+    <div class="cert-logos">
+      <div class="cert-logo">
+        <div class="cert-badge">ISO<br>9001</div>
+        <span class="cert-name">ISO 9001:2015</span>
+      </div>
+      <div class="cert-logo">
+        <div class="cert-badge">OEKO<br>TEX®</div>
+        <span class="cert-name">OEKO-TEX Standard 100</span>
+      </div>
+      <div class="cert-logo">
+        <div class="cert-badge">BSCI<br>Audit</div>
+        <span class="cert-name">BSCI Social Audit</span>
+      </div>
+      <div class="cert-logo">
+        <div class="cert-badge">Gold<br>Supplier</div>
+        <span class="cert-name">Alibaba Gold Supplier</span>
+      </div>
+      <div class="cert-logo">
+        <div class="cert-badge">Trade<br>Assur.</div>
+        <span class="cert-name">Trade Assurance</span>
+      </div>
+      <div class="cert-logo">
+        <div class="cert-badge">GOTS<br>Cert.</div>
+        <span class="cert-name">GOTS Organic Cotton</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Strip -->
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-content fade-up">
+      <h2>Ready to Outfit Your Team?</h2>
+      <p>Tell us your quantity, style, and timeline — we'll get back with a full quote in under 12 hours. No commitment required.</p>
+      <div class="cta-btns">
+        <a href="mailto:tropiknit@outlook.com?subject=Bulk+Order+Quote+Request" class="cta-btn-w">Get Free Quote Now</a>
+        <a href="https://wa.me/85257099856?text=Hi%2C%20I%27m%20interested%20in%20bulk%20custom%20t-shirts" target="_blank" class="cta-btn-t">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <div class="logo"><img src="D:/下载/tropiknit/logo.png" alt="Logo" style="height:50px;width:auto;display:block;object-fit:contain;filter:brightness(0) invert(1);" /></div>
+        <p>Factory-direct bulk custom apparel for sports teams, university clubs, corporate brands, and event organizers worldwide. MOQ 20pcs. ISO 9001 certified. Est. 2008.</p>
+        <div class="f-contact">
+          <a href="mailto:tropiknit@outlook.com">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            tropiknit@outlook.com
+          </a>
+          <a href="https://wa.me/85257099856" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.04 0h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 16.92z"/></svg>
+            WhatsApp: +852 5709 9856
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            11th Floor, Zhujiang International Center, Longgang District, Shenzhen
+          </a>
+        </div>
+        <div class="social-links">
+          <a class="soc-btn" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a class="soc-btn" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a class="soc-btn" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#">Sports Team Apparel</a></li>
+          <li><a href="#">Corporate Uniforms</a></li>
+          <li><a href="#">University Clubs</a></li>
+          <li><a href="#">Event Merchandise</a></li>
+          <li><a href="#">Nonprofit Campaigns</a></li>
+          <li><a href="#">Private Label / OEM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">Cotton T-Shirts</a></li>
+          <li><a href="#">Performance Jerseys</a></li>
+          <li><a href="#">Polo Shirts</a></li>
+          <li><a href="#">Hoodies &amp; Sweatshirts</a></li>
+          <li><a href="#">Tank Tops</a></li>
+          <li><a href="#">Kids &amp; Youth Sizes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Our Factory</a></li>
+          <li><a href="#">Quality Control</a></li>
+          <li><a href="#">Certifications</a></li>
+          <li><a href="#">How to Order</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GroupWear Manufacturing Co., Ltd. All rights reserved. · Guangdong, China</p>
+      <div class="footer-badges">
+        <span class="f-badge">ISO 9001</span>
+        <span class="f-badge">OEKO-TEX</span>
+        <span class="f-badge">BSCI</span>
+        <span class="f-badge">Gold Supplier</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<div class="wa-float">
+  <a href="https://wa.me/85257099856?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20bulk%20custom%20t-shirts" target="_blank">
+    <div class="wa-btn">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+  </a>
+  <div class="wa-tip">💬 Chat with our sales team</div>
+</div>
+
+<!-- Scroll Top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+  // ---- Hero Slider ----
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  let cur = 0, timer;
+
+  function goTo(n) {
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+  }
+  function startAuto() { timer = setInterval(() => goTo(cur + 1), 5500); }
+  function resetAuto() { clearInterval(timer); startAuto(); }
+
+  document.getElementById('prevBtn').addEventListener('click', () => { goTo(cur - 1); resetAuto(); });
+  document.getElementById('nextBtn').addEventListener('click', () => { goTo(cur + 1); resetAuto(); });
+  dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); resetAuto(); }));
+  startAuto();
+
+  // ---- Scroll Top ----
+  const st = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => st.classList.toggle('visible', window.scrollY > 400));
+  st.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // ---- Fade-up Animations ----
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  // ---- Countdown Timer ----
+  const endTime = new Date();
+  endTime.setDate(endTime.getDate() + 7);
+  endTime.setHours(23, 59, 59, 0);
+
+  function updateCountdown() {
+    const diff = Math.max(0, endTime - new Date());
+    const days = Math.floor(diff / 86400000);
+    const hrs  = Math.floor((diff % 86400000) / 3600000);
+    const min  = Math.floor((diff % 3600000) / 60000);
+    const sec  = Math.floor((diff % 60000) / 1000);
+    const fmt = n => String(n).padStart(2, '0');
+    document.getElementById('c-days').textContent = fmt(days);
+    document.getElementById('c-hrs').textContent  = fmt(hrs);
+    document.getElementById('c-min').textContent  = fmt(min);
+    document.getElementById('c-sec').textContent  = fmt(sec);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
