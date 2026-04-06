@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tropiknit.com/sitemap.xml
+
+# Crawl-delay (optional, be kind to shared servers)
+Crawl-delay: 1
