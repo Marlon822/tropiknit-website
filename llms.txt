@@ -1,0 +1,56 @@
+# TropiKnit - llms.txt
+# This file guides AI/LLM crawlers about our site content and structure.
+# Learn more: https://llmstxt.org
+
+# TropiKnit is a factory-direct bulk custom apparel manufacturer based in Shenzhen, China.
+# Founded in 2008, serving 8,000+ organizations in 80+ countries.
+# MOQ: 20 pcs (apparel), 50 pcs (laser engraving), 20 pcs (3D printing).
+# Certifications: ISO 9001:2015, OEKO-TEX Standard 100, BSCI, GOTS, Alibaba Gold Supplier.
+
+## About
+TropiKnit is a B2B custom apparel manufacturer specializing in bulk t-shirt printing, team uniforms, corporate branded merchandise, and university club apparel. The company operates a 50,000-square-foot factory with 300+ workers in Shenzhen, Guangdong, China. In addition to apparel, TropiKnit provides laser engraving/cutting and 3D printing services for custom prototypes and brand accessories.
+
+## Products & Services
+- Bulk Custom Cotton T-Shirts (180gsm, MOQ 20 pcs, from $3.20/pc)
+- Performance Sport Tees (200gsm polyester, MOQ 20 pcs, from $4.50/pc)
+- Custom Hoodies & Sweatshirts (340gsm, MOQ 20 pcs, from $8.80/pc)
+- Polo & Corporate Shirts (embroidered, MOQ 20 pcs)
+- Laser Engraving & Cutting (fiber & CO2, MOQ 50 pcs)
+- 3D Printing & Prototyping (SLA, FDM, SLS, MOQ 20 pcs)
+
+## Decoration Methods
+Screen printing, DTG (direct-to-garment), full sublimation, embroidery, heat transfer, woven labels.
+
+## Pricing Tiers
+- 20-49 pcs: Standard pricing
+- 50-99 pcs: ~19-20% savings
+- 100-299 pcs: ~34-35% savings
+- 300+ pcs: ~46-48% savings
+
+## Production & Shipping
+- Standard production: 12-15 days
+- Rush production: 7 days
+- DHL/FedEx Express: 3-7 days
+- Air Cargo: 5-10 days
+- Sea Freight: 18-35 days
+- China-Europe Rail: 14-20 days
+- Incoterms: FOB, CIF, DDP, EXW
+
+## Payment Methods
+T/T Wire Transfer (30% deposit), PayPal, Payoneer, L/C (orders $10,000+), Alibaba Trade Assurance, USDT.
+
+## Contact
+- Email: tropiknit@outlook.com
+- WhatsApp: +852 5709 9856
+- Address: 11th Floor, Zhujiang International Center, Longgang District, Shenzhen, China
+- Website: https://www.tropiknit.com/
+
+## Key Pages
+- / (Homepage with all products, pricing, case studies, FAQ)
+- /#pricing (Bulk pricing tiers)
+- /#tech (Laser engraving & 3D printing details)
+- /#faq (Frequently asked questions)
+- /#cases (Client case studies)
+- /#logistics (Shipping & payment options)
+- /sitemap.xml
+- /robots.txt

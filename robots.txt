@@ -1,7 +1,29 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tropiknit.com/sitemap.xml
+# Explicitly allow AI/LLM crawlers for GEO
+User-agent: GPTBot
+Allow: /
 
-# Crawl-delay (optional, be kind to shared servers)
-Crawl-delay: 1
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.tropiknit.com/sitemap.xml
